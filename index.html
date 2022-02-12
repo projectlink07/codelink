@@ -18,6 +18,117 @@
         border-radius: 15px !important;
         padding: 5px 14px !important;
       }
+       @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+      /* SEARCH BOX CSS */
+      :root {
+        --primary-color: #ecf8fa;
+        --accent-color: #0072f5;
+
+        --text-color: #263238;
+        --body-color: #80deea;
+        --main-font: "roboto";
+        --font-bold: 700;
+        --font-regular: 400;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      /* body {
+        color: var(--text-color);
+        background-color: var(--body-color);
+        font-family: var(--main-font), Arial;
+        font-weight: var(--font-regular); }*/
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 20vh;
+      }
+      h1 {
+        font-weight: var(--font-bold);
+      }
+      input,
+      button {
+        border: none;
+        background: none;
+        outline: 0;
+      }
+      button {
+        cursor: pointer;
+      }
+      .SearchBox-input::placeholder {
+        /* No es un seudoelemento estandar */
+        color: rgb(0, 0, 0);
+        opacity: 0.6;
+      }
+      /* Chrome, Opera ySafari */
+      .SearchBox-input::-webkit-input-placeholder {
+        color: rgb(0, 0, 0);
+      }
+      /* Firefox 19+ */
+      .SearchBox-input::-moz-placeholder {
+        color: rgb(0, 0, 0);
+      }
+      /* IE 10+ y Edge */
+      .SearchBox-input:-ms-input-placeholder {
+        color: rgb(0, 0, 0);
+      }
+      /* Firefox 18- */
+      #formGroupExampleInput:-moz-placeholder {
+        color: rgb(0, 0, 0);
+      }
+      /* Main search box */
+      .SearchBox {
+        --height: 4em;
+        display: flex;
+
+        border-radius: var(--height);
+        background-color: var(--primary-color);
+        height: var(--height);
+        border-style: inset;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(48, 91, 231);
+      }
+      .SearchBox:hover .SearchBox-input {
+        padding-left: 2em;
+        padding-right: 1em;
+        width: 240px;
+      }
+      .SearchBox-input {
+        width: 0;
+        font-size: 1.2em;
+        color: rgb(0, 0, 0);
+        transition: 0.45s;
+      }
+      .SearchBox-button {
+        display: flex;
+        border-radius: 50%;
+        width: var(--height);
+        height: var(--height);
+        background-color: var(--accent-color);
+        transition: 0.3s;
+      }
+      .SearchBox-button:active {
+        transform: scale(0.85);
+      }
+      .SearchBox-icon {
+        margin: auto;
+        color: #fff;
+      }
+
+      @media screen and (min-width: 400px) {
+        .SearchBox:hover .SearchBox-input {
+          width: 500px;
+        }
+      }
+      /*--------------------*/
     </style>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,8 +191,29 @@
         </button>
       </div>
     </header>
-    <div class="container1">
+     <!-- Search bar -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
+    <main>
+      <h1>SEARCH BOX</h1>
+
+      <div class="SearchBox">
+        <input type="text" class="SearchBox-input" placeholder="Search Here" />
+
+        <button class="SearchBox-button">
+          <i class="SearchBox-icon material-icons">search</i>
+        </button>
+      </div>
+    </main>
+    <!------- -->
+    <div class="container1">
     <li>
       <b>Program 1 Write a program to accept two numbers from the user. And
       find out the LCM of these numbers.</b>
