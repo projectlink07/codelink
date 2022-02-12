@@ -41,6 +41,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript">
+      function printDiv(divName) {
+          var printContents = document.getElementById(divName).innerHTML;
+          w=window.open();
+          w.document.write(printContents);
+          w.print();
+          w.close();
+      }
+  </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
       rel="stylesheet"
@@ -49,6 +58,7 @@
     <script src="prism.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>JAVA HELPSHEET</title>
+    
   </head>
   <body>
     <header class="text-gray-600 body-font">
@@ -106,6 +116,9 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <center>
+   <input type="button" value="Print this page" onClick="window.print()" ></center>
+   <hr>
 <h1><centre>EXERCISE: Print the following using loops in java</h1></centre>
     <div class="polaroid">
       <img
